@@ -3,8 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Pet pet = new Pet();
-        PetShop petShop = new PetShop();
+        PetShop petShop = new PetShop(10,5);
         System.out.println("""
                 O que você deseja fazer no momento:
                 1: Dar banho no pet;
@@ -27,13 +26,13 @@ public class Main {
 
             switch (operacao){
                 case 1:
-                    pet.darBanho();
+                    petShop.banhoNoPet();
                     break;
                 case 2:
                     petShop.abastecerAgua();
                     break;
                 case 3:
-                    petShop.shampoo();
+                    petShop.abastecerShampoo();
                     break;
                 case 4:
                     System.out.println(petShop.getAguaNaMaquina());
@@ -42,16 +41,16 @@ public class Main {
                     System.out.println(petShop.getShampooNaMaquina());
                     break;
                 case 6:
-                    pet.temPetBanhando();
+                    petShop.temPetBanhando();
                     break;
                 case 7:
-                    pet.colocarPet();
+                    petShop.colocarPet();
                     break;
                 case 8:
-                    pet.retirarPet();
+                    petShop.retirarPet();
                     break;
                 case 9:
-                    pet.limparMaquina();
+                    petShop.limparMaquina();
                     break;
             }
             System.out.println("""
